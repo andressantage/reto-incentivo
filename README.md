@@ -18,3 +18,10 @@ La tabla campers tiene una llave primaria como varchar
     CONSTRAINT pk_campers PRIMARY KEY (idCamper),
     CONSTRAINT fk_RegCampers FOREIGN KEY (idReg) REFERENCES region (idReg)
 ); */
+
+En la carpeta imagenes esta el documento con las tablas
+
+## RUTAS
+http://localhost/ApolT01-033/reto-incentivo/campus/campers.html
+
+en la carpeta uploads/campers.php esta la api
