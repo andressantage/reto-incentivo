@@ -7,11 +7,11 @@ SHOW DATABASES;
 USE campuslands;
 
 --la tabla pais parece tener un error ya que el nombre del pais esta definido como un valor entero 
-CREATE TABLE pais(
+/* CREATE TABLE pais(
     idPais int NOT NULL AUTO_INCREMENT,
     nombrePais int NOT NULL,
     CONSTRAINT pk_pais PRIMARY KEY (idPais)
-);
+); */
 --CORREGIDO
 --la tabla pais le cambie el tipo de dato a VARCHAR(50) debido a que es el nombre de un pais y este deberia ser un string
 CREATE TABLE pais(
@@ -37,7 +37,7 @@ CREATE TABLE region(
 );
     
 -- la tabla campers tiene una llave primaria como varchar
-CREATE TABLE campers(
+/* CREATE TABLE campers(
     idCamper varchar(20) NOT NULL,
     nombreCamper varchar(50) NOT NULL,
     apellidoCamper varchar(50) NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE campers(
     idReg int,
     CONSTRAINT pk_campers PRIMARY KEY (idCamper),
     CONSTRAINT fk_RegCampers FOREIGN KEY (idReg) REFERENCES region (idReg)
-);
+); */
 --CORREGIDO:
 -- cambie de la tabla campers la columna idCamper como INT y con autoincremento para buenas practicas, ademas por ser llave primaria
 CREATE TABLE campers(
@@ -59,3 +59,15 @@ CREATE TABLE campers(
 );
 
 SHOW TABLES;
+
+INSERT INTO pais (nombrePais) VALUES('Colombia');
+
+INSERT INTO departamento (nombreDep,idPais) VALUES('Santander',1);
+INSERT INTO departamento (nombreDep,idPais) VALUES('Cundinamarca',1);
+
+INSERT INTO region (nombreReg,idDep) VALUES('Bogota',2);
+INSERT INTO region (nombreReg,idDep) VALUES('Bucaramanga',1);
+
+INSERT INTO region (nombreReg,idDep) VALUES('Bucaramanga',1);
+
+INSERT INTO campers (nombreCamper,apellidoCamper,fechaNac,idReg) VALUES('Cesar','Santana','1990-03-25',1);
