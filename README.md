@@ -21,7 +21,15 @@ La tabla campers tiene una llave primaria como varchar
 
 En la carpeta imagenes esta el documento con las tablas
 
-## RUTAS
+## RUTAS DE PETICION
+Ruta de la peticion: 
+**El link anterior puede cambiar debido a la ubicacion del archvo
+http://localhost/ApolT01-033/reto-incentivo/uploads/campers
+
+# RUTAS DE PROYECTO FRONTECN
+campus/campers.html
+
 http://localhost/ApolT01-033/reto-incentivo/campus/campers.html
 
 en la carpeta uploads/campers.php esta la api
+**El link anterior puede cambiar 
